@@ -18,13 +18,21 @@ export default function Home() {
       });
 
     return <>
-        <Image source={hamburgerMenu} style={styles.hamburger}/>
-        <Text>Recipefy</Text>
-        <Image source={person} style={styles.icon}/>
+        <View style={styles.main}>
+            <Image source={hamburgerMenu} style={styles.hamburger}/>
+            <Text>Recipefy</Text>
+            <Image source={person} style={styles.icon}/>
+        </View>
     </>
 }
 
 const styles = StyleSheet.create({
+    main: {
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
+        gap: "15px",
+    },  
     titulo: {
       fontSize: 20,
       fontFamily: 'Inter',
@@ -38,5 +46,6 @@ const styles = StyleSheet.create({
     icon: {
         width: "34px",
         height: "34px",
+        borderRadius: "20px",
     }
 });
